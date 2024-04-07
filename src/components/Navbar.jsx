@@ -1,4 +1,4 @@
-const Navbar = () => {
+const Navbar = ({setCategory}) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div className="container-fluid">
@@ -8,17 +8,20 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-                <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <li className="nav-item" style={{cursor: "pointer"}}>
+                  <a className="nav-link" onClick={() => setCategory("general")}>General</a>
                 </li>
-                <li className="nav-item">
-                <a className="nav-link" href="#">Features</a>
+                <li className="nav-item" style={{cursor: "pointer"}}>
+                  <a className="nav-link" onClick={() => setCategory("sports")}>Sports</a>
                 </li>
-                <li className="nav-item">
-                <a className="nav-link" href="#">Pricing</a>
+                <li className="nav-item" style={{cursor: "pointer"}}>
+                  <a className="nav-link" onClick={() => setCategory("technology")}>Technology</a>
                 </li>
-                <li className="nav-item">
-                <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+                <li className="nav-item" style={{cursor: "pointer"}}>
+                  <a className="nav-link" onClick={() => setCategory("health")}>Health</a>
+                </li>
+                <li className="nav-item" style={{cursor: "pointer"}}>
+                  <a className="nav-link" onClick={() => setCategory("science")}>Science</a>
                 </li>
             </ul>
             </div>
